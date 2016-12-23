@@ -1,0 +1,38 @@
+[core]
+    autocrlf = false
+    editor = vim
+    excludesfile = /home/ftoulemon/.gitignore
+[user]
+    name = ftoulemon
+    email = florentin.toulemon@gmail.com
+[mergetool]
+    keepBackup = false
+[alias]
+    ci = commit
+    ciam = commit -a --amend
+    co = checkout
+    st = status --short --branch
+    wt = worktree
+    br = branch
+    lg = log --graph --abbrev-commit --decorate --date=relative --format=format:'%C(bold blue)%h%C(reset) - %C(bold green)(%ar)%C(reset) %C(white)%s%C(reset) %C(dim white)- %an%C(reset)%C(bold yellow)%d%C(reset)' --all
+    ds = diff --stat
+    cob = checkout -b
+    com = "!f() { git checkout $1 && git merge - && git branch -d @{-1} ; }; f"
+    adst = "!f() { git add $@ && git st ; }; f"
+    adi = add -i
+[push]
+    default = simple
+[merge]
+    tool = bc3
+[mergetool "bc3"]
+    trustExitCode = true
+[diff]
+    tool = bc3
+[difftool "bc3"]
+    trustExitCode = true
+[filter "hawser"]
+    clean = git hawser clean %f
+    smudge = git hawser smudge %f
+    required = true
+[include]
+    path = .dotfiles/git/gitconfig_specific
