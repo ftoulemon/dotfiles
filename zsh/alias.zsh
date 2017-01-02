@@ -26,8 +26,6 @@ alias killl='sudo killall'
 alias poogle='ping www.google.com'
 alias 3g='sudo ifconfig usb0 up && sudo dhclient -v usb0'
 alias sshirc='ssh ftoulemon@next-shell.ack.tf'
-alias update='sudo apt-get update'
-alias upgrade='sudo apt-get dist-upgrade'
 alias vpn='/home/ftoulemon/vpn/vpn-alfred.sh 80 tcp-client'
 
 alias restore='screen -dR session'
