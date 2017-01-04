@@ -11,8 +11,10 @@ if [ ! -d $ZSH ]; then
     fi
 fi
 
-plugins=(git colored-man web-search colorize docker cp sudo thefuck tmux screen virtualenv zsh-autosuggestions ubuntu python)
+plugins=(git colored-man web-search colorize docker cp sudo thefuck tmux screen virtualenv zsh-autosuggestions ubuntu python zsh-navigation-tools)
 
 source $ZSH/oh-my-zsh.sh
 
+# unalias ag from `ubuntu` plugin
+unalias ag
 
