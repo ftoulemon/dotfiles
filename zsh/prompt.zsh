@@ -19,5 +19,5 @@ precmd() {
 }
 
 prompt_line_1a='%B%F{cyan}.%b%F{cyan}-%B%F{black}[%B%F{green}%~%B%F{black}]%b%F{gray}$(virtualenv_prompt_info)%b%F{blue}${vcs_info_msg_0_}%B%F{black}%b%F{cyan}'
-prompt_line_1b='%B%F{black}[%T][%b%F{cyan}%n%B%F{cyan}@%b%F{cyan}%m%B%F{black}]%b%F{cyan}-'
+prompt_line_1b='%B%F{black}[%T][%b%F{cyan}%n%B%F{cyan}@%b%F{cyan}%m%B%F{black}]%b%F{cyan}'
 
