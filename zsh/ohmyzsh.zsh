@@ -11,7 +11,7 @@ if [ ! -d $ZSH ]; then
     fi
 fi
 
-plugins=(git colored-man web-search colorize docker cp sudo thefuck tmux screen virtualenv zsh-autosuggestions ubuntu python zsh-navigation-tools z vi-mode)
+plugins=(git colored-man web-search colorize docker cp sudo thefuck tmux screen virtualenv ubuntu python z)
 
 source $ZSH/oh-my-zsh.sh
 
