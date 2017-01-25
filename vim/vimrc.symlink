@@ -21,7 +21,8 @@ Plugin 'scrooloose/syntastic'
 Plugin 'majutsushi/tagbar'
 Plugin 'tpope/vim-fugitive'
 Plugin 'airblade/vim-gitgutter'
-Plugin 'powerline/powerline', {'rtp': 'powerline/bindings/vim/'}
+Plugin 'vim-airline/vim-airline'
+Plugin 'vim-airline/vim-airline-themes'
 Plugin 'skwp/greplace.vim'
 Plugin 'nathanaelkane/vim-indent-guides'
 Plugin 'python-rope/ropevim'
@@ -36,8 +37,13 @@ filetype plugin indent on
 " {{{ plugin
 " load pathogen
 "call pathogen#infect()
-" Powerline
-let g:Powerline_symbols = 'fancy'
+" Airline
+let g:airline_powerline_fonts = 1
+let g:airline#extensions#tabline#enabled = 1
+let g:airline#extensions#tabline#show_close_button = 0
+let g:airline#extensions#tabline#show_buffers = 1
+let g:airline#extensions#tabline#show_tabs = 1
+let g:airline_theme='powerlineish'
 " Tagbar
 let g:tagbar_systemenc = 'cp936'
 set tags=./.tags;/
