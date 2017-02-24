@@ -1,7 +1,7 @@
 set encoding=utf-8          " Specify the utf-8 encoding
 set fileencodings=ucs-bom,utf-8,latin1 " Allows encoding detection
 set term=xterm-256color
-set t_Co=8
+set t_Co=256
 
 
 " {{{ Vundle
@@ -29,6 +29,7 @@ Plugin 'nathanaelkane/vim-indent-guides'
 Plugin 'vimwiki/vimwiki'
 Plugin 'Valloric/YouCompleteMe'
 Plugin 'junegunn/vim-easy-align'
+Plugin 'morhetz/gruvbox'
 
 call vundle#end()
 filetype plugin indent on
@@ -109,6 +110,10 @@ xmap ga <Plug>(EasyAlign)
 " Start interactive EasyAlign for a motion/text object (e.g. gaip)
 nmap ga <Plug>(EasyAlign)
 
+" Gruvbox
+let g:gruvbox_underline = 0
+let g:gruvbox_bold = 1
+
 " }}}
 
 " misc options
@@ -150,10 +155,6 @@ set showtabline=2
 
 " highlight search matches
 set hlsearch
-
-" highlight position of cursor
-set cursorline
-"set cursorcolumn
 
 set laststatus=2
 " }}}
@@ -263,7 +264,11 @@ function! SetupTex()
 endfunction
 
 " }}}
+
 " {{{ colors
+colorscheme gruvbox
+set background=dark
+
 highlight SpecialKey cterm=bold ctermfg=0
 " tabe line colors
 highlight TabLineFill ctermfg=DarkGray
@@ -271,18 +276,20 @@ highlight TabLineSel ctermfg=4 ctermbg=DarkGray cterm=bold
 highlight TabLine ctermfg=7 cterm=none ctermbg=DarkGray
 
 " number column colors
-highlight LineNr cterm=none ctermbg=none ctermfg=4
+"highlight LineNr cterm=none ctermbg=none ctermfg=4
 
 " fold colors
 highlight Folded cterm=none ctermbg=none ctermfg=4
 highlight FoldColumn cterm=none ctermbg=none ctermfg=4
 
 " visual mode colors
-highlight Visual ctermbg=7 ctermfg=4
+"highlight Visual ctermbg=7 ctermfg=4
+" normal mode color
+highlight Normal cterm=none ctermbg=none
 
 " dictionary menu colors
-highlight Pmenu ctermbg=7 ctermfg=0
-highlight PmenuSel ctermbg=Yellow ctermfg=0
+"highlight Pmenu ctermbg=7 ctermfg=0
+"highlight PmenuSel ctermbg=Yellow ctermfg=0
 
 " diff colors
 highlight DiffAdd cterm=none ctermbg=4
@@ -290,15 +297,23 @@ highlight DiffDelete cterm=none ctermbg=4
 highlight DiffChange cterm=none ctermbg=4
 highlight DiffText cterm=none ctermbg=4
 
+" GitGutter colors
+highlight GitGutterAdd cterm=bold ctermbg=none ctermfg=green
+highlight GitGutterChange cterm=bold ctermbg=none
+highlight GitGutterDelete cterm=bold ctermbg=none ctermfg=red
+highlight GitGutterChangeDelete cterm=bold ctermbg=none
+
+" Sign column
+highlight SignColumn cterm=none ctermbg=none
+
 " keep cursor column last so it overrides all others
-highlight CursorColumn cterm=none ctermbg=Black
+" highlight position of cursor
+set cursorline
 highlight CursorLine cterm=none ctermbg=Black
 
 highlight Search cterm=none ctermbg=7 ctermfg=4
-
-" make sure bold is disabled or your terminal will look like the vegas strip
-set background=dark
 " }}}
+
 " {{{ filetype dependent
 autocmd BufNewFile,BufRead *.html setlocal commentstring=<!--%s-->
 " ruby commenstring
@@ -332,6 +347,7 @@ set spellsuggest=best,10
 set spl=en
 set dictionary-=/usr/share/dict/words dictionary+=/usr/share/dict/words
 "}}}
+
 "{{{dmenu
 " Strip the newline from the end of a string
 function! Chomp(str)
