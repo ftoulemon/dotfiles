@@ -29,7 +29,6 @@ Plugin 'nathanaelkane/vim-indent-guides'
 Plugin 'vimwiki/vimwiki'
 Plugin 'Valloric/YouCompleteMe'
 Plugin 'junegunn/vim-easy-align'
-Plugin 'morhetz/gruvbox'
 
 call vundle#end()
 filetype plugin indent on
@@ -109,10 +108,6 @@ let g:ycm_server_python_interpreter = 'python'
 xmap ga <Plug>(EasyAlign)
 " Start interactive EasyAlign for a motion/text object (e.g. gaip)
 nmap ga <Plug>(EasyAlign)
-
-" Gruvbox
-let g:gruvbox_underline = 0
-let g:gruvbox_bold = 1
 
 " }}}
 
@@ -266,7 +261,6 @@ endfunction
 " }}}
 
 " {{{ colors
-colorscheme gruvbox
 set background=dark
 
 highlight SpecialKey cterm=bold ctermfg=0
@@ -276,20 +270,20 @@ highlight TabLineSel ctermfg=4 ctermbg=DarkGray cterm=bold
 highlight TabLine ctermfg=7 cterm=none ctermbg=DarkGray
 
 " number column colors
-"highlight LineNr cterm=none ctermbg=none ctermfg=4
+highlight LineNr cterm=none ctermbg=none ctermfg=4
 
 " fold colors
 highlight Folded cterm=none ctermbg=none ctermfg=4
 highlight FoldColumn cterm=none ctermbg=none ctermfg=4
 
 " visual mode colors
-"highlight Visual ctermbg=7 ctermfg=4
+highlight Visual ctermbg=7 ctermfg=4
 " normal mode color
 highlight Normal cterm=none ctermbg=none
 
 " dictionary menu colors
-"highlight Pmenu ctermbg=7 ctermfg=0
-"highlight PmenuSel ctermbg=Yellow ctermfg=0
+highlight Pmenu ctermbg=7 ctermfg=0
+highlight PmenuSel ctermbg=LightBlue ctermfg=0
 
 " diff colors
 highlight DiffAdd cterm=none ctermbg=4
