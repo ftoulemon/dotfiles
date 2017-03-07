@@ -279,11 +279,11 @@ highlight FoldColumn cterm=none ctermbg=none ctermfg=4
 " visual mode colors
 highlight Visual ctermbg=7 ctermfg=4
 " normal mode color
-highlight Normal cterm=none ctermbg=none
+"highlight Normal cterm=none ctermbg=none
 
 " dictionary menu colors
 highlight Pmenu ctermbg=7 ctermfg=0
-highlight PmenuSel ctermbg=LightBlue ctermfg=0
+highlight PmenuSel ctermbg=Blue ctermfg=0
 
 " diff colors
 highlight DiffAdd cterm=none ctermbg=4
