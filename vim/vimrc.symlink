@@ -29,6 +29,8 @@ Plugin 'nathanaelkane/vim-indent-guides'
 Plugin 'vimwiki/vimwiki'
 Plugin 'Valloric/YouCompleteMe'
 Plugin 'junegunn/vim-easy-align'
+Plugin 'rhysd/vim-clang-format'
+Plugin 'tell-k/vim-autopep8'
 
 call vundle#end()
 filetype plugin indent on
@@ -58,6 +60,7 @@ set tags=./.tags;/
 " Syntastic
 let g:syntastic_auto_loc_list=0
 let g:syntastic_loc_list_height=4
+let g:syntastic_javascript_checkers = ['jshint']
 let g:syntastic_python_checkers = ['pylint']
 let g:syntastic_python_pylint_rcfile = '~/.pylintrc'
 let g:syntastic_stl_format = "[%E{Err: %fe #%e}%B{, }%W{Warn: %fw #%w}]"
@@ -108,6 +111,10 @@ let g:ycm_server_python_interpreter = 'python'
 xmap ga <Plug>(EasyAlign)
 " Start interactive EasyAlign for a motion/text object (e.g. gaip)
 nmap ga <Plug>(EasyAlign)
+
+" Autopep8
+let g:autopep8_max_line_length=120
+let g:autopep8_ignore=""
 
 " }}}
 
