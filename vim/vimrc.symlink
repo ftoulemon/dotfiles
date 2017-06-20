@@ -25,7 +25,6 @@ Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
 Plugin 'skwp/greplace.vim'
 Plugin 'nathanaelkane/vim-indent-guides'
-"Plugin 'python-rope/ropevim'
 Plugin 'vimwiki/vimwiki'
 Plugin 'Valloric/YouCompleteMe'
 Plugin 'junegunn/vim-easy-align'
@@ -106,7 +105,7 @@ let g:indent_guides_guide_size = 1
 let g:ycm_python_binary_path = 'python'
 let g:ycm_server_python_interpreter = 'python'
 
-" Easy aligmn
+" Easy align
 " Start interactive EasyAlign in visual mode (e.g. vipga)
 xmap ga <Plug>(EasyAlign)
 " Start interactive EasyAlign for a motion/text object (e.g. gaip)
@@ -115,6 +114,22 @@ nmap ga <Plug>(EasyAlign)
 " Autopep8
 let g:autopep8_max_line_length=120
 let g:autopep8_ignore=""
+let g:autopep8_aggressive=2
+
+" Clang-format
+let g:clang_format#style_options = {
+            \ "BasedOnStyle": "LLVM",
+            \ "Standard": "C++11",
+            \ "Language": "JavaScript",
+            \ "AllowShortBlocksOnASingleLine": "false",
+            \ "AllowShortFunctionsOnASingleLine": "false",
+            \ "AllowShortIfStatementsOnASingleLine": "false",
+            \ "AllowShortLoopsOnASingleLine": "false",
+            \ "BreakBeforeBraces": "Attach",
+            \ "ColumnLimit": 80,
+            \ "UseTab": "false",
+            \ "IndentWidth": 4,
+            \ "TabWidth": 4}
 
 " }}}
 

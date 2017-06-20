@@ -21,6 +21,7 @@
     adst = "!f() { git add $@ && git st ; }; f"
     adi = add -i
     aliases = !git config --get-regexp 'alias.*' | colrm 1 6 | sed 's/[ ]/ = /' | sort
+    dad = !curl https://icanhazdadjoke.com/
 [push]
     default = simple
 [merge]

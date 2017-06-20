@@ -30,3 +30,9 @@ alias vpn='/home/ftoulemon/vpn/vpn-alfred.sh 80 tcp-client'
 
 alias restore='screen -dR session'
 
+for ((n = 1; n < 32; n++))
+do
+    echo "alias" `printf 'f%.0s' {1..$n}`"=fuck" | source /dev/stdin
+    echo
+done
+

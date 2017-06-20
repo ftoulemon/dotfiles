@@ -2,4 +2,5 @@
 /*.egg*/
 /build/
 /dist/
+/static/
 
