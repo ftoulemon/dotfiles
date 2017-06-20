@@ -30,6 +30,8 @@ Plugin 'Valloric/YouCompleteMe'
 Plugin 'junegunn/vim-easy-align'
 Plugin 'rhysd/vim-clang-format'
 Plugin 'tell-k/vim-autopep8'
+" At the end
+Plugin 'ryanoasis/vim-devicons'
 
 call vundle#end()
 filetype plugin indent on
