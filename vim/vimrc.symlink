@@ -25,7 +25,7 @@ Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
 Plugin 'skwp/greplace.vim'
 Plugin 'nathanaelkane/vim-indent-guides'
-Plugin 'vimwiki/vimwiki'
+"Plugin 'vimwiki/vimwiki'
 Plugin 'Valloric/YouCompleteMe'
 Plugin 'junegunn/vim-easy-align'
 Plugin 'rhysd/vim-clang-format'
@@ -53,6 +53,7 @@ let g:airline#extensions#tabline#show_close_button = 0
 let g:airline#extensions#tabline#show_buffers = 1
 let g:airline#extensions#tabline#show_tabs = 1
 let g:airline_theme='powerlineish'
+
 
 " Tagbar
 let g:tagbar_systemenc = 'cp936'
@@ -83,7 +84,7 @@ let g:plantuml_executable_script='java -jar ~/dev/uml/plantuml.jar'
 
 " Ctrl-P
 set runtimepath^=~/.vim/bundle/ctrlp.vim
-set wildignore+=*/tmp/*,*.so,*.swp,*zip
+set wildignore+=*/tmp/*,*.so,*.swp,*zip,*/__pycache__/*,*.pyc
 let g:ctrlp_extensions = ['buffertag']
 
 " Use ag in CtrlP for listing files. Lightning fast and respects .gitignore
