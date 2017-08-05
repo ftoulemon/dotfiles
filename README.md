@@ -1,5 +1,5 @@
 # Dotfiles
 
-Source: [holman/dotfiles](https://github.com/holman/dotfiles)
+Source of `script/`: [holman/dotfiles](https://github.com/holman/dotfiles)
 
 
