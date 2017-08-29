@@ -175,6 +175,8 @@ set showtabline=2
 
 " highlight search matches
 set hlsearch
+" Incremental search
+set incsearch
 
 set laststatus=2
 " }}}
@@ -241,7 +243,7 @@ set complete=.,w,b,u,U,t,i,d    " mega tab completion
 set omnifunc=synthaxcomplete#Complete
 
 " turn off swap files
-set noswapfile
+"set noswapfile
 
 " options for diff mode
 set diffopt=filler
