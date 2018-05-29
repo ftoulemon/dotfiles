@@ -25,11 +25,11 @@ Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
 Plugin 'skwp/greplace.vim'
 Plugin 'nathanaelkane/vim-indent-guides'
-"Plugin 'vimwiki/vimwiki'
 Plugin 'Valloric/YouCompleteMe'
 Plugin 'junegunn/vim-easy-align'
 Plugin 'rhysd/vim-clang-format'
 Plugin 'tell-k/vim-autopep8'
+"Plugin 'taketwo/vim-ros'
 " At the end
 Plugin 'ryanoasis/vim-devicons'
 
@@ -113,6 +113,18 @@ let g:ycm_server_python_interpreter = 'python'
 xmap ga <Plug>(EasyAlign)
 " Start interactive EasyAlign for a motion/text object (e.g. gaip)
 nmap ga <Plug>(EasyAlign)
+
+" vim-ros
+let g:ycm_semantic_triggers = {
+\   'roslaunch' : ['="', '$(', '/'],
+\   'rosmsg,rossrv,rosaction' : ['re!^', '/'],
+\ }
+" Controls which package to build
+" g:ros_make [current|all] 
+" Which build system to use
+" g:ros_build_system [catkin|rosbuild|catkin-tools] 
+" Additional options for catkin_make (i.e '-j4 -DCMAKE_BUILD_TYPE=Debug' ...)
+" g:ros_catkin_make_options
 
 " Autopep8
 let g:autopep8_max_line_length=120
