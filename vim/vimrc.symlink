@@ -64,8 +64,10 @@ let g:syntastic_auto_loc_list=0
 let g:syntastic_loc_list_height=4
 let g:syntastic_javascript_checkers = ['jshint']
 let g:syntastic_python_checkers = ['pylint']
+let g:syntastic_cpp_checkers = ['cppcheck']
 let g:syntastic_python_pylint_rcfile = '~/.pylintrc'
 let g:syntastic_stl_format = "[%E{Err: %fe #%e}%B{, }%W{Warn: %fw #%w}]"
+let g:syntastic_cppcheck_config_file = 'config.cppcheck'
 
 " NerdTree
 let NERDTreeIgnore=['.o$[[file]]', '^moc_[[file]]', '\.pyc$']
@@ -357,17 +359,6 @@ autocmd FileType help nnoremap <buffer> <BS> <C-T>
 " Remove trailing characters
 autocmd FileType c,cpp,java,php,python,javascript autocmd BufWritePre <buffer> :%s/\s\+$//e
 "}}}
-"php syntax options {{{
-let php_sql_query = 1  "for SQL syntax highlighting inside strings
-let php_htmlInStrings = 1  "for HTML syntax highlighting inside strings
-"php_baselib = 1  "for highlighting baselib functions
-"php_asp_tags = 1  "for highlighting ASP-style short tags
-"php_parent_error_close = 1  "for highlighting parent error ] or )
-"php_parent_error_open = 1  "for skipping an php end tag, if there exists an open ( or [ without a closing one
-"php_oldStyle = 1  "for using old colorstyle
-"php_noShortTags = 1  "don't sync <? ?> as php
-let php_folding = 1  "for folding classes and functions
-" }}}
 "netrw options {{{
 let g:netrw_sort_sequence = '[\/]$,\.php,\.phtml,*,\.info$,\.swp$,\.bak$,\~$'
 "}}}

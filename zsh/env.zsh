@@ -8,5 +8,10 @@ export PATH=/opt/Xilinx/SDK/2016.4/gnu/arm/lin/bin/:$PATH
 export PATH="$PATH:$HOME/.rvm/bin"
 
 # ROS
-source /opt/ros/melodic/setup.zsh
+if [ -f /opt/ros/melodic/setup.zsh ]; then
+    source /opt/ros/melodic/setup.zsh
+fi
+if [ -f ~/dev/catkin_ws/devel/setup.zsh ]; then
+    source ~/dev/catkin_ws/devel/setup.zsh
+fi
 
