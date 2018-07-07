@@ -29,6 +29,7 @@ Plugin 'Valloric/YouCompleteMe'
 Plugin 'junegunn/vim-easy-align'
 Plugin 'rhysd/vim-clang-format'
 Plugin 'tell-k/vim-autopep8'
+Plugin 'pboettch/vim-cmake-syntax'
 "Plugin 'taketwo/vim-ros'
 " At the end
 Plugin 'ryanoasis/vim-devicons'
@@ -289,13 +290,12 @@ set mouse=a
 autocmd BufRead,BufNewFile *.template set filetype=javascript
 
 let g:tex_flavor='latex'
-autocmd BufRead,BufNewFile *.txt set filetype=text
 autocmd FileType latex,tex,text :call SetupTex()
 
 function! SetupTex()
     set textwidth=80
     set wrap
-    setlocal spell spelllang=fr
+    " setlocal spell spelllang=fr
     let g:syntastic_auto_loc_list=0
 endfunction
 
