@@ -2,6 +2,7 @@
     autocrlf = false
     editor = vim
     excludesfile = /home/ftoulemon/.gitignore
+	pager = less -x1,5
 [user]
     name = ftoulemon
     email = florentin.toulemon@gmail.com

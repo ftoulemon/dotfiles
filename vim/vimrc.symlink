@@ -110,6 +110,7 @@ let g:indent_guides_guide_size = 1
 " YCM
 let g:ycm_python_binary_path = 'python'
 let g:ycm_server_python_interpreter = 'python'
+let g:ycm_global_ycm_extra_conf = '~/.dotfiles/vim/ycm_extra_conf.py'
 
 " Easy align
 " Start interactive EasyAlign in visual mode (e.g. vipga)

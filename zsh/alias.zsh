@@ -5,6 +5,7 @@ alias l='ls -CF --group-directories-first'
 alias ls='ls --color="auto" --group-directories-first'
 alias s='ls --color="auto" --group-directories-first'
 alias grep='grep --color -n'
+alias rgrep='rgrep --color -n'
 
 alias halt='sudo halt'
 alias hatl='sudo halt'
