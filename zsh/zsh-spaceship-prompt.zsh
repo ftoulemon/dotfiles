@@ -3,7 +3,7 @@ SPACESHIP_PROMPT_ORDER=(
     user host dir git docker venv conda pyenv exec_time time line_sep
     battery vi_mode jobs exit_code char)
 
-SPACESHIP_TIME_SHOW=true
+SPACESHIP_TIME_SHOW=false
 SPACESHIP_TIME_COLOR=gray
 SPACESHIP_TIME_PREFIX="["
 SPACESHIP_TIME_SUFFIX="]"
