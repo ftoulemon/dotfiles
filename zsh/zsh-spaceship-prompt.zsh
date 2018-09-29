@@ -1,0 +1,17 @@
+# Spaceship theme
+SPACESHIP_PROMPT_ORDER=(
+    user host dir git docker venv conda pyenv exec_time time line_sep
+    battery vi_mode jobs exit_code char)
+
+SPACESHIP_TIME_SHOW=true
+SPACESHIP_TIME_COLOR=gray
+SPACESHIP_TIME_PREFIX="["
+SPACESHIP_TIME_SUFFIX="]"
+SPACESHIP_USER_SHOW=true
+SPACESHIP_USER_COLOR=cyan
+SPACESHIP_USER_SUFFIX=""
+SPACESHIP_HOST_SHOW=true
+SPACESHIP_HOST_COLOR=cyan
+SPACESHIP_HOST_PREFIX="@"
+SPACESHIP_DIR_COLOR=green
+SPACESHIP_DIR_PREFIX=""
