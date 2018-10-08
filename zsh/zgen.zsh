@@ -1,3 +1,4 @@
+source $HOME/.dotfiles/zsh/zsh-spaceship-prompt.zsh
 source $HOME/.dotfiles/zgen/zgen.zsh
 
 # if the init scipt doesn't exist
