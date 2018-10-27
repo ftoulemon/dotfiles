@@ -30,6 +30,7 @@ Plugin 'junegunn/vim-easy-align'
 Plugin 'rhysd/vim-clang-format'
 Plugin 'tell-k/vim-autopep8'
 Plugin 'pboettch/vim-cmake-syntax'
+Plugin 'arthurxavierx/vim-caser'
 " At the end
 Plugin 'ryanoasis/vim-devicons'
 
