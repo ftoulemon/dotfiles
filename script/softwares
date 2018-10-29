@@ -1,5 +1,6 @@
 zsh
 git
+git-extras
 vim
 tmux
 screen
@@ -26,5 +27,6 @@ python3-dev
 
 lacheck
 cppcheck
+pylint
 
 vlc
