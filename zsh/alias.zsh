@@ -30,6 +30,7 @@ alias sshirc='ssh ftoulemon@next-shell.ack.tf'
 alias vpn='/home/ftoulemon/vpn/vpn-alfred.sh 80 tcp-client'
 
 alias restore='screen -dR session'
+alias tmux='tmux -u'
 
 for ((n = 1; n < 32; n++))
 do

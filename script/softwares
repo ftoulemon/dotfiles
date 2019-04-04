@@ -29,4 +29,6 @@ lacheck
 cppcheck
 pylint
 
+nethogs
+
 vlc
