@@ -33,6 +33,7 @@ set t_Co=256
   Plugin 'pboettch/vim-cmake-syntax'
   Plugin 'arthurxavierx/vim-caser'
   Plugin 'octol/vim-cpp-enhanced-highlight'
+  Plugin 'lfv89/vim-interestingwords'
   " At the end
   Plugin 'ryanoasis/vim-devicons'
 
@@ -131,12 +132,15 @@ set t_Co=256
               \ "Standard": "C++11",
               \ "AllowShortIfStatementsOnASingleLine": "false",
               \ "AllowShortLoopsOnASingleLine": "false",
-              \ "BreakBeforeBraces": "Attach",
+              \ "BreakBeforeBraces": "Allman",
               \ "BreakBeforeBinaryOperators": "true",
               \ "ColumnLimit": 80,
               \ "UseTab": "false",
               \ "IndentWidth": 2,
               \ "TabWidth": 2}
+
+  " vim-mark
+  let g:interestingWordsTermColors = ['lightblue', 'lightgreen', 'lightyellow', 'lightred', 'cyan', 'lightmagenta']
 
 " }}}
 
