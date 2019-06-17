@@ -15,6 +15,3 @@ plugins=(git git-extras colored-man-pages web-search colorize docker cp sudo the
 
 source $ZSH/oh-my-zsh.sh
 
-# unalias ag from `ubuntu` plugin
-unalias ag
-
