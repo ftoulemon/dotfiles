@@ -84,6 +84,7 @@ set t_Co=256
   let g:ackprg = 'ag --vimgrep'
   cnoreabbrev Ack Ack!
   nnoremap <leader>a :Ack!<space>
+  nnoremap <leader>c :Ack! --cpp -w<space>
 
   " plantuml
   let g:plantuml_executable_script='java -jar ~/dev/uml/plantuml.jar'
@@ -340,9 +341,12 @@ set t_Co=256
   autocmd FileType help nnoremap <buffer> <CR> <C-]>
   autocmd FileType help nnoremap <buffer> <BS> <C-T>
   " Remove trailing characters
-  autocmd FileType c,cpp,java,php,python,javascript autocmd BufWritePre <buffer> :%s/\s\+$//e
+  autocmd FileType c,cpp,java,php,python,javascript,xml autocmd BufWritePre <buffer> :%s/\s\+$//e
   " AW specific
-  autocmd FileType c,cpp setlocal sw=2 ts=2 sts=0 et
+  autocmd FileType c,cpp,xml setlocal sw=2 ts=2 sts=0 et
+  " Doxygen
+  autocmd BufNewFile,BufRead *.dox setlocal filetype=cpp.doxygen
+  autocmd BufNewFile,BufRead *.dox :call SetupTex()
 " }}}
 
 " {{{ LaTeX
