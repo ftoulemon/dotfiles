@@ -10,7 +10,7 @@ set t_Co=256
   call vundle#begin()
 
   Plugin 'mileszs/ack.vim'
-  Plugin 'ctrlpvim/ctrlp.vim'
+  " Plugin 'ctrlpvim/ctrlp.vim'
   Plugin 'davidhalter/jedi-vim'
   Plugin 'scrooloose/nerdcommenter'
   Plugin 'scrooloose/nerdtree'
@@ -34,6 +34,10 @@ set t_Co=256
   Plugin 'arthurxavierx/vim-caser'
   Plugin 'octol/vim-cpp-enhanced-highlight'
   Plugin 'lfv89/vim-interestingwords'
+  Plugin 'junegunn/fzf'
+  Plugin 'junegunn/fzf.vim'
+  Plugin 'junegunn/vim-peekaboo'
+  Plugin 'mtdl9/vim-log-highlighting'
   " At the end
   Plugin 'ryanoasis/vim-devicons'
 
@@ -98,6 +102,19 @@ set t_Co=256
   let g:ctrlp_user_command = 'ag %s -l --nocolor -g ""'
   " ag is fast enough that CtrlP doesn't need to cache (meh)
   let g:ctrlp_use_caching = 1
+
+  " FZF
+  let g:fzf_action = {
+      \ 'ctrl-t': 'tab split',
+      \ 'ctrl-x': 'split',
+      \ 'ctrl-v': 'vsplit' }
+  let g:fzf_layout = { 'down': '~30%' }
+  nmap <C-P> :Files<CR>
+  nmap <C-O> :Tags<CR>
+  nmap <C-B> :Buffers<CR>
+
+  " vim-peekaboo
+    "let val = substitute(val, '[^\x00-\x7F]', '?', 'g')
 
   " Greplace
   set grepprg=ag
