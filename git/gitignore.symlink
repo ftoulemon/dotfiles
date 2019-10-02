@@ -4,3 +4,4 @@
 /dist/
 /static/
 *.swp
+session.vim

@@ -38,6 +38,8 @@ set t_Co=256
   Plugin 'junegunn/fzf.vim'
   Plugin 'junegunn/vim-peekaboo'
   Plugin 'mtdl9/vim-log-highlighting'
+  Plugin 'leafgarland/typescript-vim'
+  Plugin 'Quramy/tsuquyomi'
   " At the end
   Plugin 'ryanoasis/vim-devicons'
 
