@@ -4,4 +4,8 @@
 /dist/
 /static/
 *.swp
-session.vim
+/session.vim
+.syntastic_cpp_config
+
+/target/
+/setenv.sh

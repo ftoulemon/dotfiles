@@ -19,8 +19,8 @@ set t_Co=256
   Plugin 'scrooloose/syntastic'
   Plugin 'majutsushi/tagbar'
   Plugin 'tpope/vim-fugitive'
-  " Plugin 'airblade/vim-gitgutter'
-  Plugin 'mhinz/vim-signify'
+  Plugin 'airblade/vim-gitgutter'
+  " Plugin 'mhinz/vim-signify'
   Plugin 'vim-airline/vim-airline'
   Plugin 'vim-airline/vim-airline-themes'
   Plugin 'edkolev/tmuxline.vim'
@@ -78,6 +78,8 @@ set t_Co=256
   let g:syntastic_cpp_config_file = '.syntastic_cpp_config'
   let g:syntastic_cppcheck_config_file = '.syntastic_cpp_config'
   let g:syntastic_tex_checkers = ['lacheck', 'text/language_check']
+  let g:tsuquyomi_disable_quickfix = 1
+  let g:syntastic_typescript_checkers = ['tsuquyomi']
 
   " NerdTree
   let NERDTreeIgnore=['.o$[[file]]', '^moc_[[file]]', '\.pyc$']
@@ -152,9 +154,9 @@ set t_Co=256
               \ "Standard": "C++11",
               \ "AllowShortIfStatementsOnASingleLine": "false",
               \ "AllowShortLoopsOnASingleLine": "false",
-              \ "BreakBeforeBraces": "Allman",
+              \ "BreakBeforeBraces": "Linux",
               \ "BreakBeforeBinaryOperators": "true",
-              \ "ColumnLimit": 80,
+              \ "ColumnLimit": 120,
               \ "UseTab": "false",
               \ "IndentWidth": 2,
               \ "TabWidth": 2}
@@ -452,8 +454,8 @@ set t_Co=256
   map <C-F9> :set nopaste<CR>
   map <F10> :set nospell<CR>
   " <F11> don't use; terminal full-screen
-  map <C-F12> :!ctags -R --c++-kinds=+p --fields=+iaS --extra=+q .<CR>
-  map <F12> :!ctags -R -f .tags .<CR>
+  map <C-F12> :!ctags -R --c++-kinds=+p --fields=+iaS --extra=+q -f .tags .<CR>
+  map <F12> :!ctags -R -f .tags --exclude=target --exclude="boost-lib*" --exclude=session.vim .<CR>
 " }}}
 
 " {{{ ctags stuff
