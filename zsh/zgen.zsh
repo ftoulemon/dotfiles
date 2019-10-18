@@ -8,7 +8,12 @@ if ! zgen saved; then
     zgen load zsh-users/zsh-autosuggestions
     zgen load zsh-users/zsh-completions
     zgen load denysdovhan/spaceship-prompt spaceship
+    zgen load b4b4r07/emoji-cli
 
     # generate the init script from plugins above
     zgen save
 fi
+
+zle -N emoji::cli
+bindkey "^S" emoji::cli
+
